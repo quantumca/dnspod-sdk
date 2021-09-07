@@ -1,6 +1,6 @@
 <?php
 
-namespace DNSPod\Responses;
+namespace QuantumCA\DNSPod\Responses;
 
 /**
  * @property int $id

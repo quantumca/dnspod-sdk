@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantumCA\Traits;
+namespace QuantumCA\DNSPod\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use QuantumCA\DNSPod;
-use QuantumCA\Exceptions\RequestException;
+use QuantumCA\DNSPod\Exceptions\RequestException;
 
 /**
  * @property DNSPod $sdk

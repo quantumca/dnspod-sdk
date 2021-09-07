@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantumCA\Exceptions;
+namespace QuantumCA\DNSPod\Exceptions;
 
 use Exception;
 

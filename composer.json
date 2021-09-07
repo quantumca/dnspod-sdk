@@ -7,12 +7,12 @@
     },
     "autoload": {
         "psr-4": {
-            "QuantumCA\\": "src/"
+            "QuantumCA\\DNSPod\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "QuantumCA\\Tests\\": "tests/"
+            "QuantumCA\\DNSPod\\Tests\\": "tests/"
         }
     },
     "license": "MIT",

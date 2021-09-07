@@ -1,10 +1,13 @@
 <?php
 
-namespace QuantumCA\Domain;
+namespace QuantumCA\DNSPod\Domain;
 
 use QuantumCA\DNSPod;
-use QuantumCA\Traits\CanRequest;
+use QuantumCA\DNSPod\Traits\CanRequest;
 
+/**
+ * @method \QuantumCA\DNSPod\Responses\Domain\Info info(array $parameters) 获取域名信息 @see https://docs.dnspod.cn/api/5f5624e9e75cf42d25bf67ac/
+ */
 class Domain
 {
     use CanRequest;

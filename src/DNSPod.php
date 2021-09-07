@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantumCA;
+namespace QuantumCA\DNSPod;
 
 class DNSPod
 {
@@ -34,7 +34,7 @@ class DNSPod
     /**
      * 域名
      * @param string $domain 
-     * @return QuantumCA\Domain\Domain 
+     * @return Domain\Domain 
      */
     public function domain($domain)
     {
