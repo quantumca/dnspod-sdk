@@ -35,10 +35,9 @@ trait CanRequest
 
     public function __call($method, $arguments)
     {
-        $resource = array_reverse(explode('\\', static::class))[0];
         $method = ucfirst($method);
 
-        $call = $this->getHttpClient()->post(join('.', [$resource, $method]), [
+        $call = $this->getHttpClient()->post(join('.', [ucfirst($this->resource), $method]), [
             RequestOptions::FORM_PARAMS => array_merge($this->constructor_arguments, $arguments, ['format' => 'json', 'login_token' => $this->sdk->getAuthorizationValue(),]),
         ]);
         $json = json_decode($call->getBody()->__toString());

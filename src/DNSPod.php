@@ -2,6 +2,10 @@
 
 namespace QuantumCA\DNSPod;
 
+/**
+ * @method Domain\Domain domain(string $domain)
+ * @method Record\Record record(string $domain)
+ */
 class DNSPod
 {
     /**
@@ -32,21 +36,16 @@ class DNSPod
     }
 
     /**
-     * 域名
-     * @param string $domain 
-     * @return Domain\Domain 
-     */
-    public function domain($domain)
-    {
-        return new Domain\Domain($this, $domain);
-    }
-
-    /**
      * 获取鉴权字串
      * @return string
      */
     public function getAuthorizationValue() 
     {
         return join(',', [$this->id, $this->token,]);
+    }
+
+    public function __call($name, $arguments)
+    {
+        return new ResourceForCall(...[$this, $name, ...$arguments]);
     }
 }
