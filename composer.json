@@ -1,0 +1,26 @@
+{
+    "name": "quantumca/dnspod",
+    "description": "DNSPod.cn 的 PHP SDK, Lavel 友好",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "6.*|7.*|8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuantumCA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "QuantumCA\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quantum CA",
+            "email": "ca@quantumca.limited"
+        }
+    ],
+    "minimum-stability": "dev"
+}
