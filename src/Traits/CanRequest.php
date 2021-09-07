@@ -37,7 +37,6 @@ trait CanRequest
     {
         $method = ucfirst($method);
 
-        print_r(array_merge($this->constructor_arguments, isset($arguments[0]) ? $arguments[0] : [], ['format' => 'json', 'login_token' => $this->sdk->getAuthorizationValue(),]));
         $call = $this->getHttpClient()->post(join('.', [ucfirst($this->resource), $method]), [
             RequestOptions::FORM_PARAMS => array_merge($this->constructor_arguments, isset($arguments[0]) ? $arguments[0] : [], ['format' => 'json', 'login_token' => $this->sdk->getAuthorizationValue(),]),
         ]);
